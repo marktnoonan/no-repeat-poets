@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Handlebars Test</title>
+<link rel="stylesheet" href="css/master.css" media="screen" title="no title">
+</head>
+
+<body>
+
+<div class="container">
+  <h2>No-Repeat Poets</h2>
+      Because who's got the time to read the same words over and over? Repeated words are allowed if the capitalization or punctuation is different. Otherwise, it's one and done across all the poems in each poet's collection. All poetry data is public domain and provived by the poetrydb.org API.
+      <br><br>
+      <div class="menu">
+        Pick a poet: <select class="poets" id="all-poets">
+          <option value="Edgar Allan Poe" selected>Edgar Allan Poe</option>
+        </select> <br><input type="checkbox" id="omit-long-ass-poems">I don't have all day (omits the most long-ass poems).
+      </div>
+    <script id="entry-template" type="text/x-handlebars-template">
+
+        <div class="authors" id="template-test">
+          <h3>{{author}} ({{numberOfPoems}} poems)</h3>
+          <div class="flexcontainer">
+
+            {{#each noRepeats}}
+
+           <br>{{{this}}}
+
+            {{/each}}
+         </div>
+
+        </div>
+        It sometimes gets kind of post-modern down at the bottom and that's OK with me.
+        </div>
+
+
+
+    </script>
+
+    </div>
+
+<div class="container" id="template-output">
+
+</div>
+
+
+    <script src="js/handlebars-v4.0.5.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
