@@ -1,0 +1,35 @@
+.container {
+
+max-width: 500px;
+
+}
+
+body {
+  background-color: moccasin;
+}
+
+.poem-panel {
+  max-width: 500px;
+  text-align: left;
+  display: block;
+  font-size: large;
+  font-family: serif;
+  margin: 3px;
+  padding: 5px;
+  background-color: oldlace;
+  border: 1px solid maroon;
+}
+
+.menu {
+  background-color: oldlace;
+  border: 1px solid maroon;
+  padding: 6px;
+}
+
+.loading {
+  position: fixed;
+}
+
+a {
+  color: maroon;
+}
