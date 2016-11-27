@@ -29,3 +29,7 @@ body {
 .loading {
   position: fixed;
 }
+
+a {
+  color: maroon;
+}
