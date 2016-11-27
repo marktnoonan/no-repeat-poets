@@ -198,20 +198,22 @@ addListeners();
 // start xhr within a promise
 function getJSON(url) {
 
+    var urlForPoetryDB = encodeURI(url);
     return new Promise(function(resolve, reject) {
 
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', url);
+        xhr.open('POST', 'poem-getter.php', true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.onload = function() {
             if (xhr.status === 200) {
-                resolve(context.lines = JSON.parse(xhr.responseText));
-                //      window.alert(xhr.responseText);
+              resolve(context.lines = JSON.parse(xhr.responseText));
+              //window.alert(xhr.responseText);
             } else {
                 reject(Error('Request failed, status was ' + xhr.statusText));
 
             }
         };
-        xhr.send();
+        xhr.send("urlForPoetryDB="+urlForPoetryDB); //this part tripped me up for a minute
 
     })
 }
@@ -327,11 +329,11 @@ totalPoemsFromSearch = 0;
 }
 
 
-requestNewAuthor('Edgar Allan Poe');
+requestNewAuthor('Christina Rossetti');
 
 
 function getSelectionText() {
-    var text = "";
+    var text = '';
     if (window.getSelection) {
         text = window.getSelection().toString();
     } else if (document.selection && document.selection.type != "Control") {
