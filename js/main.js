@@ -323,12 +323,16 @@ totalPoemsFromSearch = 0;
 
         context.numberOfPoems = totalPoemsFromSearch;
 
-    }
+        if (context.numberOfPoems > 1) {
+          context.pluralPoems = true;
 
+    }
+        else {
+          context.pluralPoems = false;
 
 }
-
-
+    }
+}
 requestNewAuthor('Christina Rossetti');
 
 

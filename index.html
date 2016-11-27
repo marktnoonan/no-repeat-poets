@@ -23,7 +23,7 @@
     <script id="entry-template" type="text/x-handlebars-template">
 
         <div class="authors" id="template-test">
-          <h3>{{author}} ({{numberOfPoems}} poems)</h3>
+          <h3>{{author}} ({{numberOfPoems}} poem{{#if pluralPoems}}s{{/if}})</h3>
           <div class="flexcontainer">
 
             {{#each noRepeats}}
