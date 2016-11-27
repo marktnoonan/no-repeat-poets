@@ -10,6 +10,6 @@ This a probject to do a few things:
  - Explore improving code from first-draft spaghetti garbage to some more readable, maintainable garbage.
  - Experience problems safely!
  
- I welcome pull requests and contributions from others who are just learning all this - even tiny changes, new unrelated pages, whatever, will be accepted.
+ I welcome pull requests and contributions.
  
  Happy no-repeating!
